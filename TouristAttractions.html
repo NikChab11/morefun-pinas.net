@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="trst.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="Pinas.mp4" type="video/mp4">
+</video>  
+
+  <div class="sidebar">
+    <div class="logo-details">
+		<div class="logo_name"> <img src="coa.png" width= "50%" height= "50%" > Main Menu  </div> 
+        
+		
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="Home.html">
+          <i class='bx bxs-home-alt-2'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+       <a href="AboutPhilippines.html">
+         <i class='bx bx-flag' ></i>
+         <span class="links_name">About the Philippines</span>
+       </a>
+       <span class="tooltip">About the Philippines</span>
+     </li>
+     <li>
+       <a href="TouristAttractions.html">
+         <i class='bx bxs-plane'></i>
+         <span class="links_name">Tourist Attractions</span>
+       </a>
+       <span class="tooltip">Tourist Attractions</span>
+     </li>
+     <li>
+       <a href="VideoGallery.html">
+         <i class='bx bxs-videos'></i>
+         <span class="links_name">Video Gallery</span>
+       </a>
+       <span class="tooltip">Video Gallery</span>
+     </li>
+     <li>
+       <a href="Login.html">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Log-In</span>
+       </a>
+       <span class="tooltip">Log-In</span>
+     </li>
+     <li>
+       <a href="ContactUs.html">
+         <i class='bx bx-phone'></i>
+         <span class="links_name">Contact us</span>
+       </a>
+       <span class="tooltip">Contact us</span>
+     </li>
+     
+     <li class="profile">
+         <div class="profile-details">
+
+           <div class="name_job">
+             <div class="name">IIT-406</div>
+             <div class="job">BSIT 2A</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out"></i>
+     </li>
+    </ul>
+	
+  </div>
+    <section class="home-section">
+      <div class="text"><p style="text-align:right;">Current Date and Time : <span id='date-time'></span></p> </div><br><br><br>
+
+			<script>
+			var dt = new Date();
+			document.getElementById('date-time').innerHTML=dt;
+			</script></div>
+ <div class="header">
+  <div class="hero">
+         <div class="content">    
+            <h1>TOURIST <span>ATTRACTIONS</span></h1>           
+        </div>
+	
+
+	  <div class="slideshow-container">
+<div class="Slides fade">
+  <div class="cap">Intramuros, Manila *LUZON*</div>
+  <img src="intra.jpg" style="width:800px;height:600px;">
+   
+</div>
+
+<div class="Slides fade">
+  <div class="cap">Banaue Rice Terraces *LUZON*</div>
+  <img src="bn.jpg" style="width:800px;height:600px;">
+</div>
+
+<div class="Slides fade">
+  <div class="cap">Tagaytay, Cavite *LUZON*</div>
+  <img src="tags.jpg" style="width:800px;height:600px;">
+</div>
+
+
+
+<div class="Slides fade">
+  <div class="cap">Chocolate Hills *VISAYAS*</div>
+  <img src="ch.jpg" style="width:800px;height:600px;">
+   
+</div>
+
+<div class="Slides fade">
+  <div class="cap">Boracay Islands *VISAYAS*</div>
+  <img src="bn.jpg" style="width:800px;height:600px;">
+</div>
+
+<div class="Slides fade">
+  <div class="cap">Moalboal Sardine Run *VISAYAS*</div>
+  <img src="sard.jpg" style="width:800px;height:600px;">
+</div>
+
+
+<div class="Slides fade">
+  <div class="cap">Dahilayan Forest Park *MINDANAO*</div>
+  <img src="dah.png" style="width:800px;height:600px;">
+   
+</div>
+
+<div class="Slides fade">
+  <div class="cap">Maria Cristina Falls *MINDANAO*</div>
+  <img src="mc.jpg" style="width:800px;height:600px;">
+</div>
+
+<div class="Slides fade">
+  <div class="cap">Pink Mosque (Maguindanao) *MINDANAO*</div>
+  <img src="pink.jpg" style="width:800px;height:600px;">
+</div>
+
+</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+</div>
+
+ <script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("Slides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+    </div>
+
+
+<div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2022. All rights reserved
+		<a href="AboutPhilippines.html" >About the Philippines</a>
+		<a href="TouristAttractions.html">Tourist Attractions</a>
+		<a href="ContactUs.html">Contact Us</a>
+		<a href="Login.html">Log In</a>	
+		</span>
+		
+		</div>
+  </section>
+ 
+ 
+
+	 <script>		
+			var dt = new Date();
+			document.getElementById('date-time').innerHTML=dt;
+			  
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+  searchBtn.addEventListener("click", ()=>{ 
+    sidebar.classList.toggle("open");
+    menuBtnChange(); 
+  });
+
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+  </script>
+ 
+</body>
+</html>

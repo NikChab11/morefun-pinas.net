@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title> Login Form </title>
+</head>
+<style>
+
+.form{
+border: thick;
+border-style: solid;
+padding-top: 0px;
+padding-bottom: 60px;
+padding-left: 20px;
+padding-right: 20px;
+width: 50%;
+text-align: center;
+margin-top: 80px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button{
+background-color:#4CAF50; 
+color: white;
+padding: 15px;
+width: 100%;   
+border: none; 
+cursor: pointer;
+}
+button:hover{
+    background: transparent;
+    border-color: green;
+    color: #fd4766;
+}
+.cancelbtn {
+  background-color: red;
+color: white;
+border: none; 
+width: 20%;
+padding: 10px;
+float: left;
+}
+.img {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.profile {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 26px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 5px;
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+    }
+  cancelbtn {
+     width: 100%;
+  }
+
+
+}
+
+input:valid {
+    background-color: ivory;
+    border: none;
+    outline: 3px solid blue;
+    border-radius: 5px;
+    accent-color: gold;
+}
+
+input:invalid {
+    background-color: cream;
+    border: none;
+    outline: 3px solid red;
+    border-radius: 5px;
+    accent-color: gold;
+	
+.header{
+	width:70%;
+	position: fixed;
+	right:50px;
+}
+</style>
+
+<div class="form">
+<body>
+<center class="center">
+<form action="Home.html" method="post">
+  <div class="img">
+  
+  <div class="header" style="background-color:#f1f1f1">
+  <h1 align="left"> Login Form </h1>
+  </div>
+  
+  <br> </br>
+    <img src="login.png" alt="picture" class="profile">
+  </div>
+
+  <div class="container">
+
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" pattern="IIT406" title="Incorrect Username!" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" pattern="LETRAN" title="Incorrect Password!" required>
+
+	
+    <button type="submit"> Login </button>
+ 
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+	
+  <div class="container" style="background-color:#f1f1f1">
+	<a href="SignUpForm.html"> <button type="button" class="cancelbtn" value="Cancel"> Cancel </button> </a>
+    <span class="psw">Forgot <a href="ForgotPassword.html">password?</a></span>
+
+	</div>
+  </div>
+</form>
+</body>
+</div>
+</html>
